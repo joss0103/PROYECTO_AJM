@@ -4,6 +4,42 @@
   height: 60px;
 }
 
+.trabajosrecientes{
+  text-align:center;
+  background-color: rgba(0,0,0,0.65);
+  color: white;
+}
+
+.carousel-caption{
+  background-color: rgba(0,0,0,0.75)
+  
+}
+
+.carousel-caption h5 {
+  font-size: 3vw;
+}
+
+.carousel-caption p {
+  font-size: 3vw;
+}
+
+@media (min-width: 576px) { // Small devices (landscape phones, 576px and up)
+  .carousel-caption h5 { font-size: 1.3em;}
+  .carousel-caption p {font-size: 1.1em;}  
+}
+@media (min-width: 768px) {// Medium devices (tablets, 768px and up)
+  .carousel-caption h5 { font-size: 1.4em;}
+  .carousel-caption p {font-size: 1.2em;}  
+}
+@media (min-width: 992px) { // Large devices (desktops, 992px and up)
+  .carousel-caption h5 { font-size: 1.5em;}
+  .carousel-caption p {font-size: 1.3em;}  
+}
+@media (min-width: 1200px) { // Extra large devices (large desktops, 1200px and up)
+  .carousel-caption h5 { font-size: 1.6em;}
+  .carousel-caption p {font-size: 1.4em;}  
+}
+
 
 
 
