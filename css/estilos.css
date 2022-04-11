@@ -41,11 +41,10 @@
   .carousel-caption p {font-size: 1.4em;}  
 }
 
-.footerfill {
-  clear: both;
-  position: relative;
-  height: 200px;
-  margin-top: -200px;
+.fillview {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
