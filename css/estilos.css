@@ -27,6 +27,7 @@
   .carousel-caption h5 { font-size: 1.3em;}
   .carousel-caption p {font-size: 1.1em;}  
 }
+
 @media (min-width: 768px) {// Medium devices (tablets, 768px and up)
   .carousel-caption h5 { font-size: 1.4em;}
   .carousel-caption p {font-size: 1.2em;}  
@@ -57,11 +58,12 @@
 
 /*ESPACIO JOSEFA*/
 
-.carj{
-    width: 35%;
-    height: auto;
-    margin: 8%;
+
+
+
+.bini{
+  text-decoration: none;
+  color: #fff;
 }
-
-
+ 
  
