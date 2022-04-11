@@ -41,7 +41,12 @@
   .carousel-caption p {font-size: 1.4em;}  
 }
 
-
+.footerfill {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
+}
 
 
 
