@@ -9,66 +9,66 @@
     <title>Activity 1.2</title>
 </head>
 <body class="bodyC">
- <!--Navbar 1 -->
- <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand">
-        <img src="../img/logo3.png" class="img-logo">
-        Taller Rayo Makween
-        </a>
+    <!--Navbar 1 -->
+    <nav class="navbar navbar-dark bg-dark py-0">
+      <div class="container-fluid">
+          <a class="navbar-brand">
+          <img src="../img/logo3.png" class="img-logo">
+          Taller Rayo Makween
+          </a>
+  
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Ir</button>
+          </form>
+  
+          <ul class="nav-bar pt-4">
+              <li class="nav-item">
+                  <a href="#">Iniciar Sesión</a>
+              </li>    
 
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Ir</button>
-        </form>
+              <li class="nav-item">
+                  <a href="#">Registrarse</a>
+              </li>    
+          </ul>
+              
 
-        <ul class="nav-bar pt-4">
-            <li class="nav-item">
-                <a href="#">Iniciar Sesión</a>
-            </li>    
-
-            <li class="nav-item">
-                <a href="#">Registrarse</a>
-            </li>    
-        </ul>
-            
-
+       </div>
+  </nav>
+  
+  <!-- Navbar 2-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-0">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>          
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item px-3">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Trabajos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Por Mecánico</a></li>
+                <li><a class="dropdown-item" href="#">Por Tipo</a></li>                  
+              </ul>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link">Reservas</a>
+            </li>
+          </ul>            
+        </div>
      </div>
-</nav>
-
-<!-- Navbar 2-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>          
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link">Nosotros</a>
-          </li>
-          <li class="nav-item dropdown px-3">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Trabajos
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Por Mecánico</a></li>
-              <li><a class="dropdown-item" href="#">Por Tipo</a></li>                  
-            </ul>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link">Reservas</a>
-          </li>
-        </ul>            
-      </div>
-   </div>
-</nav>
+  </nav>
 
     <form action="" class="formC">
     <h2 class="h2C">Contacto</h2>
@@ -82,5 +82,17 @@
     <textarea class="textareaC textarea" name="mensaje" placeholder="Escriba su mensaje"></textarea>
     <input type="button" value="Enviar" id="boton" class="inputC">
 </form>
+
+    <!-- Footer -->
+
+    <div class="container-fluid px-0 pb-0 mb-0">
+      <footer class="d-flex py-3 px-1 mt-4 border-top bg-dark w-100">
+        <div class="d-flex align-items-center px-0 mx-auto">
+          <img src="../img/logo3.png" class="img-logo mx-1">
+          <span class="text-muted">Taller Mecánico Rayo Makween © 2022 - Todos los Derechos Reservados</span>
+        </div>       
+      </footer>
+    </div>
+    
 </body>
 </html>

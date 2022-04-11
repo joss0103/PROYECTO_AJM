@@ -34,6 +34,7 @@
 @media (min-width: 992px) { // Large devices (desktops, 992px and up)
   .carousel-caption h5 { font-size: 1.5em;}
   .carousel-caption p {font-size: 1.3em;}  
+  
 }
 @media (min-width: 1200px) { // Extra large devices (large desktops, 1200px and up)
   .carousel-caption h5 { font-size: 1.6em;}
