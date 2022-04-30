@@ -87,12 +87,15 @@
       <input type="hidden" id="flag_apellido" value="0">
 
       <p class="pC">Correo</p>
-      <input type="text" name ="correo" placeholder="ejemplo@gmail.com" class="inputC">
-      <p class="pC">Telefono</p>
+      <input type="text" placeholder="ejemplo@gmail.com" class="inputC" id="email" onkeyup="v_email()"/>
+      <p id="emailOK"></p>
 
-      <input type="text" name ="telefono" placeholder="+569..." class="inputC">
-      
+      <p class="pC">Telefono</p>
+      <input type="number" placeholder="+569..." class="inputC" min="0" onkeyup="v_contacto()">
+      <p id="contactoOK"></p>
+
       <p class="pC">Tipo</p>
+
       <select name="tipo" class="inputC">
         <option value="1">Reclamo</option>
         <option value="2">Consulta</option>
