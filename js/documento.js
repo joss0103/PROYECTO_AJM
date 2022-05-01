@@ -25,6 +25,7 @@ function v_nombre(){
     }
 }
 ;
+
 function v_apellido(){
     var largo_apellido = document.getElementById("apellido").value.length;
     if (largo_apellido<3 || largo_apellido > 15){
@@ -46,6 +47,7 @@ function v_apellido(){
     }
 }
 ;
+
 function v_email(){
     document.getElementById('email').addEventListener('input', function(){
     campo = event.target;
@@ -61,15 +63,37 @@ function v_email(){
         valido.innerText = "Incorrecto!";
         document.getElementById('emailOK').style.color = "red";
     }
+    
+})
+};
+    
+function v_telefono(){
+    document.getElementById('telefono').addEventListener('input', function(){
+    campo = event.target;
+    valido = document.getElementById('telefonoOK');
+
+    telRegex = /^(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}$/;
+
+    if ( telRegex.test(campo.value)) {
+        valido.innerText = "Correcto!";
+        document.getElementById('telefonoOK').style.color = "green";
+       
+    }else{
+        valido.innerText = "Incorrecto!";
+        document.getElementById('telefonoOK').style.color = "red";
+    }
+    
+})
+};
+
+function validar() {
    
-    })
-;
+    CampoTexto = document.getElementById("mensaje").value;
 
-
-
-
-/* Espacio Álvaro*/
-
-
-
-
+    if (CampoTexto.length == 0) {
+        document.getElementById("texto_apellido").innerHTML = "Correcto!";
+        document.getElementById("texto_apellido").style.color = "green";
+    }else{
+        document.getElementById("texto_apellido").innerHTML = "Incorrecto!";
+        document.getElementById("texto_apellido").style.color = "red";
+    }};
