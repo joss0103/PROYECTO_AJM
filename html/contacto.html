@@ -89,10 +89,12 @@
       <p class="pC">Correo</p>
       <input type="text" placeholder="ejemplo@gmail.com" class="inputC" id="email" onkeyup="v_email()"/>
       <p id="emailOK"></p>
+      <input type="hidden" id="flag_email" value="0">
 
       <p class="pC">Telefono</p>
       <input type="text" placeholder="+569..." class="inputC"  id="telefono" onkeyup="v_telefono()" />
       <p id="telefonoOK"></p>
+      <input type="hidden" id="flag_telefono" value="0">
 
       <p class="pC">Tipo</p>
 
@@ -101,11 +103,13 @@
         <option value="2">Consulta</option>
         <option value="3">Devolucion</option>
         <option value="4">Dudas</option>
+        <option value="5">Otro</option>
       </select>
 
       <p class="pC">Mensaje</p>
-      <textarea class="textareaC textarea" id="mensaje" placeholder="Escriba su mensaje" onkeyup="validaVacio()"></textarea>
+      <textarea class="textareaC textarea" id="mensaje" placeholder="Escriba su mensaje" onkeyup="v_mensaje()"></textarea>
       <p id="mensajeOK"></p>
+      <input type="hidden" id="flag_mensaje" value="0">
 
       <input type="button" value="Enviar" id="enviar" class="inputC">
       </form>

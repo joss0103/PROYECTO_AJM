@@ -4,10 +4,11 @@ function inicio(){
     document.getElementById("enviar").disabled = true;
 }
 
+
 function v_nombre(){
     var largo_nombre = document.getElementById("nombre").value.length;
-    if (largo_nombre<3 || largo_nombre > 15){
-        document.getElementById("texto_nombre").innerHTML = "Error! Nombre entre 3 y 15 caracteres! ";
+    if (largo_nombre<3 || largo_nombre > 15 ){
+        document.getElementById("texto_nombre").innerHTML = "Error! Nombre entre 3 y 15 caracteres!";
         document.getElementById("texto_nombre").style.color = "red";
         document.getElementById("flag_nombre").value = "0";
     }else{
@@ -18,7 +19,10 @@ function v_nombre(){
    
     var v1 = document.getElementById("flag_nombre").value;
     var v2 = document.getElementById("flag_apellido").value;
-    if (v1 =="1" && v2 =="1"){
+    var v3 = document.getElementById("flag_email").value;
+    var v4 = document.getElementById("flag_telefono").value;
+    var v5 = document.getElementById("flag_mensaje").value;
+    if (v1 =="1" && v2 =="1"&& v3 =="1"&& v4 =="1"&& v5=="1"){
         document.getElementById("enviar").disabled = false;
     }else{
         document.getElementById("enviar").disabled = true;
@@ -38,9 +42,12 @@ function v_apellido(){
         document.getElementById("flag_apellido").value = "1";
     }
    
-    var v1 = document.getElementById("flag_nombre").value;
+     var v1 = document.getElementById("flag_nombre").value;
     var v2 = document.getElementById("flag_apellido").value;
-    if (v1 =="1" && v2 =="1"){
+    var v3 = document.getElementById("flag_email").value;
+    var v4 = document.getElementById("flag_telefono").value;
+    var v5 = document.getElementById("flag_mensaje").value;
+    if (v1 =="1" && v2 =="1"&& v3 =="1"&& v4 =="1"&& v5=="1"){
         document.getElementById("enviar").disabled = false;
     }else{
         document.getElementById("enviar").disabled = true;
@@ -58,10 +65,22 @@ function v_email(){
     if ( emailRegex.test(campo.value)) {
         valido.innerText = "Correcto!";
         document.getElementById('emailOK').style.color = "green";
+        document.getElementById("flag_email").value = "1";
        
     }else{
         valido.innerText = "Incorrecto!";
         document.getElementById('emailOK').style.color = "red";
+        document.getElementById("flag_email").value = "0";
+    }
+    var v1 = document.getElementById("flag_nombre").value;
+    var v2 = document.getElementById("flag_apellido").value;
+    var v3 = document.getElementById("flag_email").value;
+    var v4 = document.getElementById("flag_telefono").value;
+    var v5 = document.getElementById("flag_mensaje").value;
+    if (v1 =="1" && v2 =="1"&& v3 =="1"&& v4 =="1"&& v5=="1"){
+        document.getElementById("enviar").disabled = false;
+    }else{
+        document.getElementById("enviar").disabled = true;
     }
     
 })
@@ -77,23 +96,47 @@ function v_telefono(){
     if ( telRegex.test(campo.value)) {
         valido.innerText = "Correcto!";
         document.getElementById('telefonoOK').style.color = "green";
+        document.getElementById("flag_telefono").value = "1";
        
     }else{
         valido.innerText = "Incorrecto!";
         document.getElementById('telefonoOK').style.color = "red";
+        document.getElementById("flag_telefono").value = "0";
     }
-    
+    var v1 = document.getElementById("flag_nombre").value;
+    var v2 = document.getElementById("flag_apellido").value;
+    var v3 = document.getElementById("flag_email").value;
+    var v4 = document.getElementById("flag_telefono").value;
+    var v5 = document.getElementById("flag_mensaje").value;
+    if (v1 =="1" && v2 =="1"&& v3 =="1"&& v4 =="1"&& v5=="1"){
+        document.getElementById("enviar").disabled = false;
+    }else{
+        document.getElementById("enviar").disabled = true;
+    }
 })
 };
 
-function validar() {
+function v_mensaje() {
    
     CampoTexto = document.getElementById("mensaje").value;
 
-    if (CampoTexto.length == 0) {
-        document.getElementById("texto_apellido").innerHTML = "Correcto!";
-        document.getElementById("texto_apellido").style.color = "green";
+    if (CampoTexto.length >= 1) {
+        document.getElementById("mensajeOK").innerHTML = "Correcto!";
+        document.getElementById("mensajeOK").style.color = "green";
+        document.getElementById("flag_mensaje").value = "1";
     }else{
-        document.getElementById("texto_apellido").innerHTML = "Incorrecto!";
-        document.getElementById("texto_apellido").style.color = "red";
-    }};
+        document.getElementById("mensajeOK").innerHTML = "Incorrecto!";
+        document.getElementById("mensajeOK").style.color = "red";
+        document.getElementById("flag_mensaje").value = "0";
+    }
+    var v1 = document.getElementById("flag_nombre").value;
+    var v2 = document.getElementById("flag_apellido").value;
+    var v3 = document.getElementById("flag_email").value;
+    var v4 = document.getElementById("flag_telefono").value;
+    var v5 = document.getElementById("flag_mensaje").value;
+    if (v1 =="1" && v2 =="1"&& v3 =="1"&& v4 =="1"&& v5=="1"){
+        document.getElementById("enviar").disabled = false;
+    }else{
+        document.getElementById("enviar").disabled = true;
+    }
+};
