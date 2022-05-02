@@ -254,11 +254,75 @@ function reg_vpass2(){
     }else {
         document.getElementById("reg_enviar").disabled = true;
     }
+}
     
    
+
+
+/* Espacio Josefa */
+
+function login_inicio(){
+    document.getElementById("login_enviar").disabled = true;
 }
 
+function login_valida_correo(){
+    document.getElementById('login_correo').addEventListener('input', function(){
+    campo = event.target;
+    valido = document.getElementById('estado_correo');
+
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+    if ( emailRegex.test(campo.value)) {
+        valido.innerText = "Correcto!";
+        document.getElementById('estado_correo').style.color = "green";
+        document.getElementById("validacion_correo").value = "1";
+       
+    }else{
+        valido.innerText = "El correo ingresado no es válido";
+        document.getElementById('estado_correo').style.color = "red";
+        document.getElementById("validacion_correo").value = "0";
+    }
+        
+})
+    var v_l1 = document.getElementById("validacion_correo").value;
+    var v_l2 = document.getElementById("validacion_contrasena").value;    
+    if (v_l1 =="1" && v_l2 =="1"){
+        document.getElementById("login_enviar").disabled = false;
+    }else{
+        document.getElementById("login_enviar").disabled = true;
+    }
+
+};
+
+function login_valida_contrasena(){
+    var largo_pass1 = document.getElementById("login_contrasena").value.length;
+    var pass1 = document.getElementById("login_contrasena").value;
+    var passRegex = /\d/;
+    if (largo_pass1 < 8 || largo_pass1 > 15 || passRegex.test(pass1) == false) {
+        document.getElementById("estado_contrasena").innerHTML = "Error: Contraseña debe entre 8 y 15 caracteres y al menos un número.";
+        document.getElementById("estado_contrasena").style.color = "red";
+        document.getElementById("validacion_contrasena").value = "0";
+    }else{
+        document.getElementById("estado_contrasena").innerHTML = "OK ✓";
+        document.getElementById("estado_contrasena").style.color = "green";
+        document.getElementById("validacion_contrasena").value = "1";
+    }
+
+    var v_l1 = document.getElementById("validacion_correo").value;
+    var v_l2 = document.getElementById("validacion_contrasena").value;    
+    if (v_l1 == "1" && v_l2 =="1"){
+        document.getElementById("login_enviar").disabled = false;
+    }else{
+        document.getElementById("login_enviar").disabled = true;
+    }
 
 
+    function FbotonOn() { 
 
-    
+        if(document.getElementById('checkBox').checked)
+            document.getElementById('texto').innerHTML = "Thank you";
+        else
+            document.getElementById('texto').innerHTML = "Good Bye";
+    }
+   
+}
